@@ -1,0 +1,7 @@
+.Header {
+  backdrop-filter: blur(5px);
+}
+
+.Navbar a:last-child {
+  margin-right: 0 !important;
+}
