@@ -2,3 +2,12 @@
   background-color: rgba(14, 59, 77, 0.205);
   backdrop-filter: blur(5px);
 }
+
+@media (max-height: 550px) {
+  .Burger-menu nav {
+    margin-top: 0 !important;
+  }
+  .Burger-menu nav a {
+    font-size: 1rem !important;
+  }
+}

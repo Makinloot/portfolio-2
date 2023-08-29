@@ -8,7 +8,9 @@ function App() {
       <Header />
 
       {/* for testing purposes */}
-      <div className="h-screen  pt-24">ONE</div>
+      <div className="h-screen  pt-24">
+        <div className="container">ONE</div>
+      </div>
       <div className="h-screen ">TWO</div>
       <div className="h-screen " id="three">
         <div className="container">THREE</div>
