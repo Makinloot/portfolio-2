@@ -9,8 +9,8 @@ export default function BurgerMenu() {
   const { showMenu, setShowMenu } = useAppContext();
   return (
     <motion.div
-      initial={{ x: "-100%" }}
-      animate={showMenu ? { x: 0 } : "initial"}
+      initial={{ x: "-100%", pointerEvents: "none" }}
+      animate={showMenu ? { x: 0, pointerEvents: "all" } : "initial"}
       transition={{ duration: 0.4, type: "just" }}
       className="Burger-menu fixed h-screen w-full px-2 z-[1000]"
     >
@@ -36,13 +36,22 @@ export default function BurgerMenu() {
         transition={{ delay: showMenu ? 1 : 0, duration: 0.3 }}
         className="flex my-12 px-4"
       >
-        <a href="#">
+        <a href="https://github.com/Makinloot" target="_blank" rel="noreferrer">
           <FaGithubSquare size={34} />
         </a>
-        <a href="#" className="mx-2">
+        <a
+          href="https://www.linkedin.com/in/tornike-epitashvili-274906180/"
+          target="_blank"
+          rel="noreferrer"
+          className="mx-2"
+        >
           <FaLinkedin size={34} />
         </a>
-        <a href="#">
+        <a
+          href="https://www.instagram.com/seed_9777/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaInstagramSquare size={34} />
         </a>
       </motion.div>

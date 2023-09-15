@@ -16,13 +16,11 @@ html {
 }
 
 body {
-  background: #111726;
+  background: rgb(17, 23, 38);
   background: linear-gradient(
-    65deg,
-    rgba(17, 23, 38, 1) 7%,
-    rgba(32, 44, 79, 1) 47%,
-    rgba(36, 73, 146, 1) 85%,
-    rgb(31, 77, 161) 100%
+    40deg,
+    rgba(17, 23, 38, 1) 4%,
+    rgba(43, 61, 93, 1) 100%
   );
   min-height: 100vh;
 }

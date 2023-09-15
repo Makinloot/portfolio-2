@@ -1,6 +1,6 @@
 .Burger-menu {
   background-color: rgba(14, 59, 77, 0.205);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(15px);
 }
 
 @media (max-height: 550px) {
