@@ -1,6 +1,7 @@
 import About from "./components/about/About";
 import BurgerMenu from "./components/burgerMenu/BurgerMenu";
 import Header from "./components/header/Header";
+import Skills from "./components/skills/Skills";
 import { useAppContext } from "./context/ContextProvider";
 import { motion } from "framer-motion";
 
@@ -18,6 +19,7 @@ function App() {
           className="shadow absolute inset-0 bg-gray-900/80 pointer-events-none"
         ></motion.div>
         <About />
+        <Skills />
       </div>
       {/* for testing purposes */}
     </div>
