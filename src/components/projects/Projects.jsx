@@ -1,64 +1,11 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import Heading from "../Heading";
-import purpledminds from "/projects/purpledminds.png";
-import languageCorpus from "/projects/language-corpus.png";
-import html from "/skills/html.png";
-import css from "/skills/css.png";
-import react from "/skills/react.png";
-import js from "/skills/js.png";
+import { projects } from "../../data";
 import "./Projects.css";
 export default function Projects() {
-  const projects = [
-    {
-      id: 0,
-      img: purpledminds,
-      name: "Purpledminds",
-      link: "https://purpledminds.com",
-      tech: [
-        {
-          id: 0,
-          icon: html,
-          name: "html",
-        },
-        {
-          id: 1,
-          icon: css,
-          name: "css",
-        },
-        {
-          id: 2,
-          icon: react,
-          name: "react",
-        },
-      ],
-    },
-    {
-      id: 1,
-      img: languageCorpus,
-      name: "Language Corpus",
-      link: "http://corpora.iliauni.edu.ge/search_words",
-      tech: [
-        {
-          id: 0,
-          icon: html,
-          name: "html",
-        },
-        {
-          id: 1,
-          icon: css,
-          name: "css",
-        },
-        {
-          id: 2,
-          icon: js,
-          name: "js",
-        },
-      ],
-    },
-  ];
   return (
-    <div className="Projects py-12 overflow-x-hidden">
+    <section className="Projects py-12 overflow-x-hidden" id="projects-section">
       <div className="container">
         <div className="Projects-wrapper">
           <div className="mb-12">
@@ -73,7 +20,7 @@ export default function Projects() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

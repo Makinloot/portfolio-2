@@ -1,5 +1,7 @@
 import About from "./components/about/About";
 import BurgerMenu from "./components/burgerMenu/BurgerMenu";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Projects from "./components/projects/Projects";
 import Skills from "./components/skills/Skills";
@@ -22,7 +24,9 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Contact />
       </div>
+      <Footer />
       {/* for testing purposes */}
     </div>
   );

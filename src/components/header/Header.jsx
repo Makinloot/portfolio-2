@@ -34,10 +34,10 @@ export default function Header() {
 function Navbar() {
   return (
     <nav className="Navbar hidden md:block">
-      <NavLink value={"about me"} delay={0.2} url={"#three"} />
-      <NavLink value={"skills"} delay={0.4} />
-      <NavLink value={"projects"} delay={0.6} />
-      <NavLink value={"contact"} delay={0.8} />
+      <NavLink value={"about me"} delay={0.2} url={"#about-section"} />
+      <NavLink value={"skills"} delay={0.4} url={"#skills-section"} />
+      <NavLink value={"projects"} delay={0.6} url={"#projects-section"} />
+      <NavLink value={"contact"} delay={0.8} url={"#contact-section"} />
     </nav>
   );
 }

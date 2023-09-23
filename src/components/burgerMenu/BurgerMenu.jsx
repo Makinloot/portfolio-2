@@ -25,10 +25,10 @@ export default function BurgerMenu() {
         </motion.button>
       </div>
       <nav className="flex flex-col px-4 mt-8">
-        <BurgerLink value={"about me"} delay={0.4} url={"#three"} />
-        <BurgerLink value={"skills"} delay={0.5} />
-        <BurgerLink value={"projects"} delay={0.6} />
-        <BurgerLink value={"contact"} delay={0.7} />
+        <BurgerLink value={"about me"} delay={0.4} url={"#about-section"} />
+        <BurgerLink value={"skills"} delay={0.5} url={"#skills-section"} />
+        <BurgerLink value={"projects"} delay={0.6} url={"#projects-section"} />
+        <BurgerLink value={"contact"} delay={0.7} url={"#contact-section"} />
       </nav>
       <motion.div
         initial={{ opacity: 0 }}

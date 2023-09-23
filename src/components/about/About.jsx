@@ -6,7 +6,7 @@ import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 const name = ["tornike", "epitashvili"];
 export default function About() {
   return (
-    <div className="About py-12">
+    <section className="About py-12" id="about-section">
       <div className="container">
         <div className="About-wrapper">
           <motion.h1 className="tracking-wide text-3xl font-primaryBold text-center">
@@ -96,6 +96,6 @@ export default function About() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
