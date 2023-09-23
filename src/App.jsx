@@ -1,6 +1,7 @@
 import About from "./components/about/About";
 import BurgerMenu from "./components/burgerMenu/BurgerMenu";
 import Header from "./components/header/Header";
+import Projects from "./components/projects/Projects";
 import Skills from "./components/skills/Skills";
 import { useAppContext } from "./context/ContextProvider";
 import { motion } from "framer-motion";
@@ -20,6 +21,7 @@ function App() {
         ></motion.div>
         <About />
         <Skills />
+        <Projects />
       </div>
       {/* for testing purposes */}
     </div>
