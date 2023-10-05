@@ -1,54 +1,48 @@
 /* eslint-disable react/prop-types */
+import { motion } from "framer-motion";
 import Heading from "../Heading";
+import Map from "../Map";
+import { AiOutlineMail } from "react-icons/ai";
+import { LuMapPin } from "react-icons/lu";
+import { BiMobileVibration } from "react-icons/bi";
 import "./Contact.css";
+import Form from "../Form";
 export default function Contact() {
   return (
-    <section className="Contact py-12" id="contact-section">
+    <section className="Contact py-12 overflow-x-hidden" id="contact-section">
       <div className="container">
-        <div className="Contact-wrapper">
+        <div className="Contact-wrapper relative">
           <div className="mb-12">
             <Heading value={"Contact me"} />
           </div>
-          <form className="Contact-form" action="#">
-            <InputField placeholder={"Name"} />
-            <InputField placeholder={"Email"} type={"email"} />
-            <InputField placeholder={"Subject"} />
-            <InputField placeholder={"Message"} type={"textarea"} />
-            <div className="flex justify-end">
-              <input
-                className="bg-[#4a68968c] rounded-sm py-2 px-8 capitalize text-white"
-                type="submit"
-                value="submit"
-              />
+          <div className="Contact-details p-2 rounded-sm bg-[#324e77] inline-block">
+            <div className="flex items-center">
+              <BiMobileVibration size={28} />
+              <strong className="ml-4">+995 592 592 332</strong>
             </div>
-          </form>
+            <div className="flex items-center my-4">
+              <AiOutlineMail size={28} />
+              <strong className="ml-4">Itorn9777@gmail.com</strong>
+            </div>
+            <div className="flex items-center">
+              <LuMapPin size={28} />
+              <strong className="ml-4">Tbilisi, Georgia, 0144</strong>
+            </div>
+          </div>
+          <div className="">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="pointer-events-none"
+            >
+              <div className="Contact-map-wrapper">
+                <Map />
+              </div>
+            </motion.div>
+            <Form />
+          </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function InputField({ type, placeholder }) {
-  if (type === "textarea") {
-    return (
-      <div className="Input-field mt-2 w-full">
-        <textarea
-          className="w-full p-2 resize-none rounded-sm bg-[#4a68968c] outline-none focus:bg-[#5a86c78c]"
-          rows={5}
-          placeholder={placeholder}
-          autoCorrect="false"
-        ></textarea>
-      </div>
-    );
-  }
-  return (
-    <div className="Input-field text-primary mt-2 w-full">
-      <input
-        className="w-full h-12 px-2 rounded-sm bg-[#4a68968c] outline-none focus:bg-[#5a86c78c]"
-        type={type ? type : "text"}
-        placeholder={placeholder}
-        required
-      />
-    </div>
   );
 }

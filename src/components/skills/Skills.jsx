@@ -2,27 +2,41 @@
 import { motion } from "framer-motion";
 import Heading from "../Heading";
 import { technologies } from "../../data";
+import Lottie from "lottie-react";
+import skillsAnimation from "../../animations/skills-animation.json";
 
 export default function Skills() {
   return (
     <section className="Skills py-12 overflow-x-hidden" id="skills-section">
       <div className="container">
         <div className="Skills-wrapper">
-          <div className="mb-12">
+          <div className="">
             <Heading value={"What i do"} />
           </div>
-          <div className="Skills-tech grid grid-cols-2 gap-4">
-            {technologies.map((tech, i) => (
-              <motion.div
-                initial={
-                  i % 2 === 0 ? { opacity: 0, x: -70 } : { opacity: 0, x: 70 }
-                }
-                whileInView={{ opacity: 1, x: 0 }}
-                key={tech.id}
-              >
-                <SkillCard icon={tech.icon} name={tech.name} />
-              </motion.div>
-            ))}
+          <div className="lg:grid grid-cols-2 lg:py-12">
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="Skills-animation my-12 lg:my-0 mx-auto max-w-[450px] lg:max-w-[500px]"
+            >
+              <Lottie
+                animationData={skillsAnimation}
+                className="relative z-[-1]"
+              />
+            </motion.div>
+            <div className="Skills-tech grid grid-cols-2 gap-4 md:grid-cols-3">
+              {technologies.map((tech, i) => (
+                <motion.div
+                  initial={
+                    i % 2 === 0 ? { opacity: 0, x: -70 } : { opacity: 0, x: 70 }
+                  }
+                  whileInView={{ opacity: 1, x: 0 }}
+                  key={tech.id}
+                >
+                  <SkillCard icon={tech.icon} name={tech.name} />
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
