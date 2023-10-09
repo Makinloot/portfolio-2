@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import Heading from "../Heading";
-import { projects } from "../../data";
+import { projects, illustrationProjects } from "../../data";
 import "./Projects.css";
+import { useState } from "react";
 export default function Projects() {
+  const [projectsType, setProjectsType] = useState("web");
   return (
     <section className="Projects py-12 overflow-x-hidden" id="projects-section">
       <div className="container">
@@ -11,12 +13,55 @@ export default function Projects() {
           <div className="mb-12">
             <Heading value={"Projects"} />
           </div>
-          <div className="Projects-items">
-            {projects.map((project, i) => (
-              <div key={i} className="mt-4">
-                <Project {...project} />
+          <div className="flex gap-2">
+            <button
+              className={`py-1 px-4 mb-4 rounded-sm capitalize ${
+                projectsType === "web"
+                  ? "bg-primary text-black"
+                  : "bg-slate-600 text-primary"
+              }`}
+              onClick={() => setProjectsType("web")}
+            >
+              web
+            </button>
+            <button
+              className={`py-1 px-4 mb-4 rounded-sm capitalize ${
+                projectsType === "illustration"
+                  ? "bg-primary text-black"
+                  : "bg-slate-600 text-primary"
+              }`}
+              onClick={() => setProjectsType("illustration")}
+            >
+              illustrations
+            </button>
+          </div>
+          <div className="Projects-items my-4">
+            {projectsType === "web" ? (
+              <div className="grid items-center justify-center gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {projects.map((project) => (
+                  <div key={project.id} className="">
+                    <Project {...project} />
+                  </div>
+                ))}
               </div>
-            ))}
+            ) : (
+              <div className="grid justify-center lg:grid-cols-2">
+                {illustrationProjects.map((project) => (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.4 }}
+                    key={project.id}
+                    className="my-8 text-center "
+                  >
+                    <strong className="block my-4">{project.name}</strong>
+                    <div className="flex items-center justify-center">
+                      <img src={project.img} />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -30,7 +75,7 @@ function Project({ name, img, link, tech }) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="Project bg-[#4a68968c] p-2 rounded-sm"
+      className="Project bg-[#4a68968c] p-2 rounded-sm max-w-[560px]"
     >
       <div className="mt-2 flex items-center justify-between">
         <motion.h3
@@ -52,8 +97,8 @@ function Project({ name, img, link, tech }) {
         </motion.a>
       </div>
       <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
+        initial={{ width: 0 }}
+        whileInView={{ width: "100%" }}
         className="my-4"
       >
         <img src={img} alt={name} />
@@ -69,11 +114,10 @@ function Project({ name, img, link, tech }) {
         reiciendis. Natus, quod incidunt?
       </motion.p>
       <div className="tech-wrapper flex mt-3">
-        {tech.map((item, i) => (
+        {tech.map((item) => (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: i * 0.35 }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             key={item.id}
             className="w-8"
           >

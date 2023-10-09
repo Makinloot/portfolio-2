@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 
 export default function Form() {
   return (
-    <form className="Contact-form mt-12 max-w-[500px] mx-auto" action="#">
+    <form
+      className="Contact-form max-w-[500px] mx-auto lg:mx-16 lg:!mt-12"
+      action="#"
+    >
       <InputField placeholder={"Name"} />
       <InputField placeholder={"Email"} type={"email"} />
       <InputField placeholder={"Subject"} />
@@ -12,7 +15,7 @@ export default function Form() {
         <motion.input
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          className="bg-[#4a68968c] rounded-sm py-2 px-8 capitalize text-white"
+          className="bg-[#324e77] rounded-sm py-2 px-8 capitalize text-white"
           type="submit"
           value="submit"
         />

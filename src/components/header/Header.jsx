@@ -11,7 +11,7 @@ export default function Header() {
       initial={{ opacity: 0, y: "-100%" }}
       animate={!showMenu ? { opacity: 1, y: 0 } : "initial"}
       transition={{ delay: !showMenu ? 0.3 : 0 }}
-      className="Header bg-[#11172638] fixed top-0 left-0 w-full"
+      className="Header bg-[#11172638] fixed top-0 left-0 z-[1000] w-full"
     >
       <div className="container">
         <div className="Header-wrapper h-24 flex justify-between items-center">

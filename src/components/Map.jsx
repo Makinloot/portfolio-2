@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -7,19 +8,47 @@ import {
 } from "react-simple-maps";
 
 const Map = () => {
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  console.log(dimensions);
+
+  useEffect(() => {
+    // Function to update dimensions
+    const updateDimensions = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    // Add event listener to update dimensions when the window is resized
+    window.addEventListener("resize", updateDimensions);
+
+    // Initial call to set dimensions
+    updateDimensions();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", updateDimensions);
+    };
+  }, []);
+
   return (
     <ComposableMap
       projection="geoAzimuthalEqualArea"
       projectionConfig={{
-        rotate: [-10.0, -52.0, 0],
-        center: [-5, -3],
+        rotate: [-10.0, -52, 0],
+        center: [-8, dimensions.width > 880 ? -5 : -3],
         scale: 2000,
       }}
     >
       <ZoomableGroup center={[39.7151, 41.8271]}>
         <Geographies
           geography="/features.json"
-          fill="#0000000a"
+          fill="transparent"
           stroke="#ccc"
           strokeWidth={0.5}
         >
@@ -31,7 +60,7 @@ const Map = () => {
         </Geographies>
       </ZoomableGroup>
       <Annotation
-        subject={[6.7, 50.2]}
+        subject={[2, 50]}
         dx={-90}
         dy={-30}
         connectorProps={{
@@ -41,7 +70,7 @@ const Map = () => {
         }}
       >
         <text
-          className="text-5xl"
+          className="text-3xl"
           x="-8"
           textAnchor="end"
           alignmentBaseline="middle"

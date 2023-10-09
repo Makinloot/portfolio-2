@@ -11,11 +11,11 @@ export default function Contact() {
   return (
     <section className="Contact py-12 overflow-x-hidden" id="contact-section">
       <div className="container">
-        <div className="Contact-wrapper relative">
+        <div className="Contact-wrapper relative overflow-y-hidden">
           <div className="mb-12">
             <Heading value={"Contact me"} />
           </div>
-          <div className="Contact-details p-2 rounded-sm bg-[#324e77] inline-block">
+          <div className="Contact-details p-2 rounded-sm bg-[#324e77] inline-block lg:mx-16">
             <div className="flex items-center">
               <BiMobileVibration size={28} />
               <strong className="ml-4">+995 592 592 332</strong>
@@ -31,9 +31,9 @@ export default function Contact() {
           </div>
           <div className="">
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="pointer-events-none"
+              initial={{ opacity: 0, width: 0 }}
+              whileInView={{ opacity: 1, width: "100%" }}
+              className="pointer-events-none lg:absolute lg:w-full lg:h-full !top-0"
             >
               <div className="Contact-map-wrapper">
                 <Map />

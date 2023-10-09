@@ -10,6 +10,9 @@ import git from "/skills/git.png";
 import tailwind from "/skills/tailwind.png";
 import purpledminds from "/projects/purpledminds.png";
 import languageCorpus from "/projects/language-corpus.png";
+import ashKnight from "/illustrations/ash-knight.png";
+import sunKnight from "/illustrations/sun-knight.png";
+import malenia from "/illustrations/malenia.png";
 
 export const technologies = [
   {
@@ -110,5 +113,115 @@ export const projects = [
         name: "js",
       },
     ],
+  },
+  {
+    id: 46,
+    img: purpledminds,
+    name: "Purpledminds",
+    link: "https://purpledminds.com",
+    tech: [
+      {
+        id: 0,
+        icon: html,
+        name: "html",
+      },
+      {
+        id: 1,
+        icon: css,
+        name: "css",
+      },
+      {
+        id: 2,
+        icon: react,
+        name: "react",
+      },
+    ],
+  },
+  {
+    id: 35,
+    img: languageCorpus,
+    name: "Language Corpus",
+    link: "http://corpora.iliauni.edu.ge/search_words",
+    tech: [
+      {
+        id: 0,
+        icon: html,
+        name: "html",
+      },
+      {
+        id: 1,
+        icon: css,
+        name: "css",
+      },
+      {
+        id: 2,
+        icon: js,
+        name: "js",
+      },
+    ],
+  },
+  {
+    id: 26,
+    img: purpledminds,
+    name: "Purpledminds",
+    link: "https://purpledminds.com",
+    tech: [
+      {
+        id: 0,
+        icon: html,
+        name: "html",
+      },
+      {
+        id: 1,
+        icon: css,
+        name: "css",
+      },
+      {
+        id: 2,
+        icon: react,
+        name: "react",
+      },
+    ],
+  },
+  {
+    id: 162,
+    img: languageCorpus,
+    name: "Language Corpus",
+    link: "http://corpora.iliauni.edu.ge/search_words",
+    tech: [
+      {
+        id: 0,
+        icon: html,
+        name: "html",
+      },
+      {
+        id: 1,
+        icon: css,
+        name: "css",
+      },
+      {
+        id: 2,
+        icon: js,
+        name: "js",
+      },
+    ],
+  },
+];
+
+export const illustrationProjects = [
+  {
+    id: 0,
+    img: ashKnight,
+    name: "Ash knight",
+  },
+  {
+    id: 1,
+    img: sunKnight,
+    name: "Solaire of Astora",
+  },
+  {
+    id: 2,
+    img: malenia,
+    name: "Goddess of Rot",
   },
 ];
