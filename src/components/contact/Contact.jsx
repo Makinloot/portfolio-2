@@ -5,8 +5,8 @@ import Map from "../Map";
 import { AiOutlineMail } from "react-icons/ai";
 import { LuMapPin } from "react-icons/lu";
 import { BiMobileVibration } from "react-icons/bi";
-import "./Contact.css";
 import Form from "../Form";
+import "./Contact.css";
 export default function Contact() {
   return (
     <section className="Contact py-12 overflow-x-hidden" id="contact-section">
@@ -30,7 +30,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="">
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, width: 0 }}
               whileInView={{ opacity: 1, width: "100%" }}
               className="pointer-events-none lg:absolute lg:w-full lg:h-full !top-0"
@@ -38,7 +38,7 @@ export default function Contact() {
               <div className="Contact-map-wrapper">
                 <Map />
               </div>
-            </motion.div>
+            </motion.div> */}
             <Form />
           </div>
         </div>

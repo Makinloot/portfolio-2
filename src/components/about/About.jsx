@@ -10,11 +10,11 @@ export default function About() {
     <section className="About py-12" id="about-section">
       <div className="container">
         <div className="About-wrapper max-w-[600px] mx-auto">
-          <motion.h1 className="tracking-wide text-3xl font-primaryBold text-center md:text-5xl lg:text-6xl">
+          <h1 className="tracking-wide text-3xl font-primaryBold text-center md:text-5xl lg:text-6xl">
             {name[0].split("").map((letter, i) => (
               <motion.span
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
                 key={i}
                 className={`${i === 0 && "capitalize"} inline-block`}
@@ -25,7 +25,7 @@ export default function About() {
             {name[1].split("").map((letter, i) => (
               <motion.span
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
                 transition={{
                   duration: 0.5,
                   delay: (name[1].length - 1 - i) * 0.07,
@@ -36,12 +36,11 @@ export default function About() {
                 {letter}
               </motion.span>
             ))}
-          </motion.h1>
+          </h1>
           <div className="flex my-8 justify-center md:my-16">
             <motion.div
               initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5 }}
+              whileInView={{ scale: 1 }}
               className="img-container w-64 h-64 rounded-full overflow-hidden md:w-96 md:h-96"
             >
               <img
@@ -53,7 +52,7 @@ export default function About() {
           </div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
             <div className="my-4">

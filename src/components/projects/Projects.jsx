@@ -45,17 +45,19 @@ export default function Projects() {
                 ))}
               </div>
             ) : (
-              <div className="grid justify-center lg:grid-cols-2">
+              <div className="grid justify-center lg:grid-cols-2 gap-4">
                 {illustrationProjects.map((project) => (
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.4 }}
                     key={project.id}
-                    className="my-8 text-center "
+                    className="my-8 text-center"
                   >
-                    <strong className="block my-4">{project.name}</strong>
-                    <div className="flex items-center justify-center">
+                    <strong className="block my-4 text-2xl md:text-4xl">
+                      {project.name}
+                    </strong>
+                    <div className="flex items-center justify-center max-w-[600px] mx-auto">
                       <img src={project.img} />
                     </div>
                   </motion.div>
@@ -97,8 +99,9 @@ function Project({ name, img, link, tech }) {
         </motion.a>
       </div>
       <motion.div
-        initial={{ width: 0 }}
-        whileInView={{ width: "100%" }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.4 }}
         className="my-4"
       >
         <img src={img} alt={name} />
@@ -113,12 +116,13 @@ function Project({ name, img, link, tech }) {
         possimus, maxime, hic sequi nobis culpa voluptas ab perferendis
         reiciendis. Natus, quod incidunt?
       </motion.p>
-      <div className="tech-wrapper flex mt-3">
+      <div className="tech-wrapper flex mt-3 gap-1">
         {tech.map((item) => (
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             key={item.id}
+            title={item.name}
             className="w-8"
           >
             <img src={item.icon} alt={item.name} />

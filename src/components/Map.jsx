@@ -42,7 +42,7 @@ const Map = () => {
       projectionConfig={{
         rotate: [-10.0, -52, 0],
         center: [-8, dimensions.width > 880 ? -5 : -3],
-        scale: 2000,
+        scale: dimensions.width >= 900 ? 1200 : 2000,
       }}
     >
       <ZoomableGroup center={[39.7151, 41.8271]}>
@@ -60,7 +60,10 @@ const Map = () => {
         </Geographies>
       </ZoomableGroup>
       <Annotation
-        subject={[2, 50]}
+        subject={[
+          dimensions.width > 880 ? 2.8 : 2,
+          dimensions.width > 880 ? 48.2 : 50,
+        ]}
         dx={-90}
         dy={-30}
         connectorProps={{

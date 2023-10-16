@@ -10,9 +10,16 @@ import git from "/skills/git.png";
 import tailwind from "/skills/tailwind.png";
 import purpledminds from "/projects/purpledminds.png";
 import languageCorpus from "/projects/language-corpus.png";
+import netflix from "/projects/netflix.png";
 import ashKnight from "/illustrations/ash-knight.png";
 import sunKnight from "/illustrations/sun-knight.png";
 import malenia from "/illustrations/malenia.png";
+import theFall from "/illustrations/the-fall.png";
+import games from "/projects/games.png";
+import weather from "/projects/weather.png";
+import medsoft from "/projects/medsoft.png";
+import sqlite from "/skills/sqlite.png";
+import sin from "/illustrations/sin.png";
 
 export const technologies = [
   {
@@ -76,18 +83,13 @@ export const projects = [
     tech: [
       {
         id: 0,
-        icon: html,
-        name: "html",
+        icon: react,
+        name: "react",
       },
       {
         id: 1,
-        icon: css,
-        name: "css",
-      },
-      {
-        id: 2,
-        icon: react,
-        name: "react",
+        icon: tailwind,
+        name: "tailwind",
       },
     ],
   },
@@ -115,94 +117,99 @@ export const projects = [
     ],
   },
   {
-    id: 46,
-    img: purpledminds,
-    name: "Purpledminds",
-    link: "https://purpledminds.com",
+    id: 2,
+    img: netflix,
+    name: "Netflix clone",
+    link: "https://dynamic-paprenjak-586a86.netlify.app",
     tech: [
       {
         id: 0,
-        icon: html,
-        name: "html",
-      },
-      {
-        id: 1,
-        icon: css,
-        name: "css",
-      },
-      {
-        id: 2,
         icon: react,
         name: "react",
       },
-    ],
-  },
-  {
-    id: 35,
-    img: languageCorpus,
-    name: "Language Corpus",
-    link: "http://corpora.iliauni.edu.ge/search_words",
-    tech: [
-      {
-        id: 0,
-        icon: html,
-        name: "html",
-      },
       {
         id: 1,
-        icon: css,
-        name: "css",
+        icon: sass,
+        name: "sass",
       },
       {
         id: 2,
-        icon: js,
-        name: "js",
+        icon: firebase,
+        name: "firebase",
       },
     ],
   },
   {
-    id: 26,
-    img: purpledminds,
-    name: "Purpledminds",
-    link: "https://purpledminds.com",
+    id: 3,
+    img: games,
+    name: "Karma games",
+    link: "https://beautiful-salamander-e8d545.netlify.app",
     tech: [
       {
         id: 0,
-        icon: html,
-        name: "html",
-      },
-      {
-        id: 1,
-        icon: css,
-        name: "css",
-      },
-      {
-        id: 2,
         icon: react,
         name: "react",
       },
-    ],
-  },
-  {
-    id: 162,
-    img: languageCorpus,
-    name: "Language Corpus",
-    link: "http://corpora.iliauni.edu.ge/search_words",
-    tech: [
-      {
-        id: 0,
-        icon: html,
-        name: "html",
-      },
       {
         id: 1,
-        icon: css,
-        name: "css",
+        icon: ts,
+        name: "typescript",
       },
       {
         id: 2,
-        icon: js,
-        name: "js",
+        icon: sass,
+        name: "sass",
+      },
+    ],
+  },
+  {
+    id: 4,
+    img: weather,
+    name: "Weather",
+    link: "https://ornate-marshmallow-18e926.netlify.app",
+    tech: [
+      {
+        id: 0,
+        icon: react,
+        name: "react",
+      },
+      {
+        id: 1,
+        icon: ts,
+        name: "typescript",
+      },
+      {
+        id: 2,
+        icon: sass,
+        name: "sass",
+      },
+    ],
+  },
+  {
+    id: 5,
+    img: medsoft,
+    name: "Medsoft Task",
+    link: "https://medsoft-task.onrender.com",
+    tech: [
+      {
+        id: 0,
+        icon: react,
+        name: "react",
+      },
+      {
+        id: 1,
+        icon: tailwind,
+        name: "tailwind",
+      },
+      {
+        id: 2,
+        icon: node,
+        name: "nodejs",
+      },
+      {
+        id: 3,
+        icon: sqlite,
+        name: "sqlite",
       },
     ],
   },
@@ -212,7 +219,7 @@ export const illustrationProjects = [
   {
     id: 0,
     img: ashKnight,
-    name: "Ash knight",
+    name: "Ash Knight",
   },
   {
     id: 1,
@@ -223,5 +230,15 @@ export const illustrationProjects = [
     id: 2,
     img: malenia,
     name: "Goddess of Rot",
+  },
+  {
+    id: 3,
+    img: theFall,
+    name: "The Fall",
+  },
+  {
+    id: 4,
+    img: sin,
+    name: "Sin",
   },
 ];
