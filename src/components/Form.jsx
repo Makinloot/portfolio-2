@@ -3,12 +3,33 @@ import { motion } from "framer-motion";
 import { Formik, Form as FormikForm } from "formik";
 import { useRef } from "react";
 import validationSchema from "../validationSchema";
+import emailjs from "@emailjs/browser";
+import { useAppContext } from "../context/ContextProvider";
 
 export default function Form() {
   const formRef = useRef(null);
+  const { setShowPopup } = useAppContext();
 
-  function handleSubmit(values) {
-    console.log(`Values: ${JSON.stringify(values)}`);
+  function handleSubmit(values, { resetForm }) {
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setShowPopup("success");
+          resetForm();
+          console.log(`Success: ${JSON.stringify(result)}`);
+        },
+        (error) => {
+          setShowPopup("error");
+          resetForm();
+          console.log(`Error: ${error}`);
+        }
+      );
   }
 
   return (
@@ -19,14 +40,22 @@ export default function Form() {
         subject: "",
         message: "",
       }}
-      onSubmit={(values) => {
-        handleSubmit(values);
-      }}
+      onSubmit={handleSubmit}
+      // onSubmit={(values) => {
+      //   handleSubmit(values);
+      // }}
       validationSchema={validationSchema}
     >
-      {({ values, handleBlur, handleChange, errors, touched }) => (
+      {({
+        values,
+        handleBlur,
+        handleChange,
+        errors,
+        touched,
+        isSubmitting,
+      }) => (
         <FormikForm
-          className="Contact-form max-w-[500px] mx-auto lg:mx-16 lg:!mt-12"
+          className="Contact-form max-w-[500px] mx-auto lg:mx-0 lg:!mt-12 overflow-hidden"
           ref={formRef}
           noValidate
         >
@@ -64,11 +93,14 @@ export default function Form() {
             value={values.message}
             error={touched.message && errors.message}
           />
+
           <div className="flex justify-end my-4">
             <motion.input
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              className="bg-[#324e77] rounded-sm py-2 px-8 capitalize text-white cursor-pointer hover:bg-[#406091]"
+              className={`bg-[#324e77] rounded-sm py-2 px-8 capitalize text-white cursor-pointer hover:bg-[#406091] ${
+                isSubmitting && "pointer-events-none"
+              }`}
               type="submit"
               value="submit"
             />

@@ -13,8 +13,6 @@ const Map = () => {
     height: window.innerHeight,
   });
 
-  console.log(dimensions);
-
   useEffect(() => {
     // Function to update dimensions
     const updateDimensions = () => {

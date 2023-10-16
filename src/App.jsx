@@ -1,3 +1,4 @@
+import Popup from "./components/Popup";
 import About from "./components/about/About";
 import BurgerMenu from "./components/burgerMenu/BurgerMenu";
 import Contact from "./components/contact/Contact";
@@ -9,7 +10,7 @@ import { useAppContext } from "./context/ContextProvider";
 import { motion } from "framer-motion";
 
 function App() {
-  const { showMenu } = useAppContext();
+  const { showMenu, showPopup } = useAppContext();
   return (
     <div className="App min-h-[100vh] text-primary font-primary relative">
       <BurgerMenu />
@@ -25,6 +26,8 @@ function App() {
         <Skills />
         <Projects />
         <Contact />
+        {showPopup === "success" && <Popup />}
+        {showPopup === "error" && <Popup error />}
       </div>
       <Footer />
       {/* for testing purposes */}

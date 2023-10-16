@@ -9,10 +9,13 @@ const useAppContext = () => {
 
 const ContextProvider = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [showPopup, setShowPopup] = useState("");
 
   const values = {
     showMenu,
     setShowMenu,
+    showPopup,
+    setShowPopup,
   };
   return <Context.Provider value={values}>{children}</Context.Provider>;
 };
