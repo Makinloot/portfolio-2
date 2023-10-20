@@ -3,30 +3,34 @@ import { motion } from "framer-motion";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { useAppContext } from "../../context/ContextProvider";
 import logo from "/logo.png";
+import Headroom from "react-headroom";
 import "./Header.css";
 export default function Header() {
   const { setShowMenu, showMenu } = useAppContext();
+
   return (
-    <motion.header
-      initial={{ opacity: 0, y: "-100%" }}
-      animate={!showMenu ? { opacity: 1, y: 0 } : "initial"}
-      transition={{ delay: !showMenu ? 0.3 : 0 }}
-      className="Header bg-[#11172638] fixed top-0 left-0 z-[1000] w-full"
-    >
-      <div className="container">
-        <div className="Header-wrapper h-24 flex justify-between items-center">
-          <div className="logo">
-            <img src={logo} />
-          </div>
-          <Navbar />
-          <div className="md:hidden">
-            <button onClick={() => setShowMenu(!showMenu)}>
-              <HiMenuAlt3 size={44} />
-            </button>
+    <Headroom downTolerance={10} upTolerance={10}>
+      <motion.header
+        initial={{ opacity: 0, y: "-100%" }}
+        animate={!showMenu ? { opacity: 1, y: 0 } : "initial"}
+        transition={{ delay: !showMenu ? 0.3 : 0 }}
+        className="Header bg-[#11172638] z-[1000] w-full"
+      >
+        <div className="container">
+          <div className="Header-wrapper h-24 flex justify-between items-center">
+            <div className="logo">
+              <img src={logo} />
+            </div>
+            <Navbar />
+            <div className="md:hidden">
+              <button onClick={() => setShowMenu(!showMenu)}>
+                <HiMenuAlt3 size={44} />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </motion.header>
+      </motion.header>
+    </Headroom>
   );
 }
 

@@ -1,41 +1,13 @@
-import { useEffect } from "react";
-import { useState } from "react";
 import {
   ComposableMap,
   Geographies,
   Geography,
   Annotation,
 } from "react-simple-maps";
+import { useAppContext } from "../context/ContextProvider";
 
 const Map = () => {
-  const [dimensions, setDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  console.log(dimensions);
-
-  useEffect(() => {
-    // Function to update dimensions
-    const updateDimensions = () => {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-
-    // Add event listener to update dimensions when the window is resized
-    window.addEventListener("resize", updateDimensions);
-
-    // Initial call to set dimensions
-    updateDimensions();
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", updateDimensions);
-    };
-  }, []);
-
+  const { dimensions } = useAppContext();
   return (
     <ComposableMap
       projection="geoAzimuthalEqualArea"
@@ -52,7 +24,7 @@ const Map = () => {
       <Geographies
         geography="/features.json"
         fill="#0d1a32"
-        stroke="#9e9e9e"
+        stroke="#636363"
         strokeWidth={0.5}
       >
         {({ geographies }) =>

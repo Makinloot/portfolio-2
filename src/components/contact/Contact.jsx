@@ -63,6 +63,7 @@ const Contact = () => {
             <motion.div
               initial={{ width: 100 }}
               whileInView={{ width: "100vw" }}
+              transition={{ type: "spring", duration: 1 }}
               className="Map-wrapper absolute h-full right-0 top-0 z-[-1000]"
             >
               <Map />
