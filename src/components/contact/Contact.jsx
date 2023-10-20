@@ -1,78 +1,77 @@
 /* eslint-disable react/prop-types */
+import Map from "../Map";
+import Form from "../Form";
 import { motion } from "framer-motion";
 import Heading from "../Heading";
-import Map from "../Map";
 import { AiOutlineMail } from "react-icons/ai";
 import { LuMapPin } from "react-icons/lu";
 import { BiMobileVibration } from "react-icons/bi";
-import Form from "../Form";
+import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import { SocialLinks } from "../about/About";
 import "./Contact.css";
-import { useEffect, useState } from "react";
-export default function Contact() {
-  const [dimensions, setDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
 
-  useEffect(() => {
-    // Function to update dimensions
-    const updateDimensions = () => {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-
-    // Add event listener to update dimensions when the window is resized
-    window.addEventListener("resize", updateDimensions);
-
-    // Initial call to set dimensions
-    updateDimensions();
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", updateDimensions);
-    };
-  }, []);
+const Contact = () => {
   return (
-    <section className="Contact py-12 overflow-x-hidden" id="contact-section">
+    <section
+      className="Contact py-12 overflow-x-hidden relative"
+      id="contact-section"
+    >
       <div className="container">
-        <div className="Contact-wrapper relative overflow-y-hidden">
-          <div className="mb-12">
-            <Heading value={"Contact me"} />
-          </div>
-          <div className="Contact-details p-2 rounded-sm bg-[#324e77] inline-block">
-            <div className="flex items-center">
-              <BiMobileVibration size={28} />
+        <div className="mb-12">
+          <Heading value={"Contact"} />
+        </div>
+        {/* CONTACT DETAILS */}
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          className="flex flex-col items-center bg-[#94b0f562] rounded-2xl"
+        >
+          <div className="md:flex gap-8 lg:gap-12">
+            <div className="flex items-center md:text-lg lg:text-3xl">
+              <BiMobileVibration className="text-4xl lg:text-5xl" />
               <strong className="ml-4">+995 592 592 332</strong>
             </div>
-            <div className="flex items-center my-4">
-              <AiOutlineMail size={28} />
+            <div className="flex items-center md:text-lg lg:text-3xl my-4">
+              <AiOutlineMail className="text-4xl lg:text-5xl" />
               <strong className="ml-4">Itorn9777@gmail.com</strong>
             </div>
-            <div className="flex items-center">
-              <LuMapPin size={28} />
+            <div className="flex items-center md:text-lg lg:text-3xl">
+              <LuMapPin className="text-4xl lg:text-5xl" />
               <strong className="ml-4">Tbilisi, Georgia, 0144</strong>
             </div>
           </div>
-          <div className="">
-            <motion.div
-              initial={
-                dimensions.width >= 800
-                  ? { opacity: 0, width: 0 }
-                  : { opacity: 0 }
-              }
-              whileInView={{ opacity: 1, width: "100%" }}
-              className="pointer-events-none lg:absolute lg:w-full lg:h-full !top-0"
-            >
-              <div className="Contact-map-wrapper">
-                <Map />
-              </div>
-            </motion.div>
+          <div className="flex my-8 gap-4">
+            <SocialLinks
+              icon={<FaGithubSquare />}
+              url={"https://github.com/Makinloot"}
+            />
+            <SocialLinks
+              icon={<FaLinkedin />}
+              url={"https://www.linkedin.com/in/tornike-epitashvili-274906180/"}
+            />
+            <SocialLinks
+              icon={<FaInstagramSquare />}
+              url={"https://www.instagram.com/seed_9777/"}
+            />
+          </div>
+        </motion.div>
+        <div className="Contact-wrapper flex">
+          <div className="flex-1 flex items-center justify-center">
             <Form />
+          </div>
+          <div className="flex-1 hidden md:flex">
+            <motion.div
+              initial={{ width: 100 }}
+              whileInView={{ width: "100vw" }}
+              className="Map-wrapper absolute h-full right-0 top-0 z-[-1000]"
+            >
+              <Map />
+            </motion.div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Contact;

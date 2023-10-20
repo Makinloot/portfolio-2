@@ -83,9 +83,14 @@ export default function About() {
                 url={"https://www.instagram.com/seed_9777/"}
               />
             </div>
-            <button className="bg-transparent border border-white/60 rounded-sm py-2 px-8 md:py-4 md:px-16 md:text-xl hover:scale-95 transition-all duration-300">
+            <motion.button
+              initial={{ background: "transparent" }}
+              whileHover={{ scale: 0.9, background: "#94b0f5a1" }}
+              transition={{ type: "spring", damping: 8 }}
+              className="bg-transparent border border-white/60 rounded-sm py-2 px-8 md:py-4 md:px-16 md:text-xl"
+            >
               Download resume
-            </button>
+            </motion.button>
           </motion.div>
         </div>
       </div>
@@ -93,17 +98,18 @@ export default function About() {
   );
 }
 
-function SocialLinks({ icon, marginx, url }) {
+export function SocialLinks({ icon, marginx, url }) {
   return (
-    <a
+    <motion.a
+      initial={{ scale: 1 }}
+      whileHover={{ scale: 1.2, color: "#94b0f5" }}
+      transition={{ type: "spring", damping: 8 }}
       href={url}
       target="_blank"
       rel="noreferrer"
-      className={`text-4xl md:text-5xl ${
-        marginx && "mx-2"
-      } hover:scale-95 transition-all duration-300`}
+      className={`text-4xl md:text-5xl ${marginx && "mx-2"}`}
     >
       {icon}
-    </a>
+    </motion.a>
   );
 }

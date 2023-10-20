@@ -21,7 +21,7 @@ function App() {
           animate={showMenu ? { opacity: 1 } : "initial"}
           transition={{ duration: 0.5 }}
           className="shadow absolute inset-0 bg-gray-900/80 pointer-events-none"
-        ></motion.div>
+        />
         <About />
         <Skills />
         <Projects />

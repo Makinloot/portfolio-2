@@ -1,13 +1,13 @@
-import html from "/skills/html.png";
-import css from "/skills/css.png";
-import js from "/skills/js.png";
-import ts from "/skills/ts.png";
-import react from "/skills/react.png";
-import node from "/skills/node.png";
-import sass from "/skills/sass.png";
-import firebase from "/skills/firebase.png";
-import git from "/skills/git.png";
-import tailwind from "/skills/tailwind.png";
+import html from "/skills/html.svg";
+import css from "/skills/css.svg";
+import js from "/skills/js.svg";
+import ts from "/skills/ts.svg";
+import react from "/skills/react.svg";
+import node from "/skills/node.svg";
+import sass from "/skills/sass.svg";
+import firebase from "/skills/firebase.svg";
+import git from "/skills/git.svg";
+import tailwind from "/skills/tailwind.svg";
 import purpledminds from "/projects/purpledminds.png";
 import languageCorpus from "/projects/language-corpus.png";
 import netflix from "/projects/netflix.png";
@@ -20,6 +20,8 @@ import weather from "/projects/weather.png";
 import medsoft from "/projects/medsoft.png";
 import sqlite from "/skills/sqlite.png";
 import sin from "/illustrations/sin.png";
+import illustrator from "/skills/ai.svg";
+import photoshop from "/skills/photoshop.svg";
 
 export const technologies = [
   {
@@ -71,6 +73,16 @@ export const technologies = [
     id: 9,
     icon: tailwind,
     name: "Tailwind CSS",
+  },
+  {
+    id: 10,
+    icon: illustrator,
+    name: "Adobe Illustrator",
+  },
+  {
+    id: 11,
+    icon: photoshop,
+    name: "Adobe Photoshop",
   },
 ];
 

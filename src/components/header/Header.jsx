@@ -50,7 +50,7 @@ function NavLink({ value, delay, url }) {
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: delay, type: "spring", damping: 12 }}
       href={url}
-      className="cursor-pointer hover:text-lightBlue mr-7 transition-colors duration-300 inline-block font-primaryBold uppercase text-[1.25rem]"
+      className="cursor-pointer lg:hover:text-lightBlue mr-7 inline-block font-primaryBold uppercase text-[1.25rem]"
     >
       {value}
     </motion.a>

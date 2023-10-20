@@ -121,7 +121,7 @@ function InputField({
   error,
 }) {
   return (
-    <div className="Input-field mt-2 w-fullrelative">
+    <div className="Input-field mt-2 w-[90vw] relative">
       <div className="mb-2 mt-4">
         <motion.label
           initial={{ opacity: 0, x: -50 }}
@@ -173,7 +173,7 @@ function InputField({
       )}
       <motion.div
         initial={{ width: 0 }}
-        animate={error ? { width: "99%" } : "initial"}
+        animate={error ? { width: "99.8%" } : "initial"}
         className="Input-border-bottom h-[2px] mt-[2px] mx-auto bg-red-500"
       />
     </div>
