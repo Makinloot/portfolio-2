@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Popup from "./components/Popup";
 import About from "./components/about/About";
 import BurgerMenu from "./components/burgerMenu/BurgerMenu";
@@ -16,18 +17,20 @@ function App() {
       <BurgerMenu />
       <Header />
       <div className={`pt-24`}>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={showMenu ? { opacity: 1 } : "initial"}
-          transition={{ duration: 0.5 }}
-          className="shadow absolute inset-0 bg-gray-900/80 pointer-events-none"
-        />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-        {showPopup === "success" && <Popup />}
-        {showPopup === "error" && <Popup error />}
+        <Suspense fallback={<div className="text-9xl">Loading...</div>}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={showMenu ? { opacity: 1 } : "initial"}
+            transition={{ duration: 0.5 }}
+            className="shadow absolute inset-0 bg-gray-900/80 pointer-events-none"
+          />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+          {showPopup === "success" && <Popup />}
+          {showPopup === "error" && <Popup error />}
+        </Suspense>
       </div>
       <Footer />
       {/* for testing purposes */}

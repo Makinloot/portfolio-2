@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import avatar from "/me.png";
+import avatar from "/me.jpg";
 import "./About.css";
 import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 

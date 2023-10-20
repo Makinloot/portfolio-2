@@ -98,6 +98,7 @@ export default function Form() {
             <motion.input
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
+              whileTap={{ scale: 0.9 }}
               className={`bg-[#324e77] rounded-sm py-2 px-8 capitalize text-white cursor-pointer hover:bg-[#406091] ${
                 isSubmitting && "pointer-events-none"
               }`}

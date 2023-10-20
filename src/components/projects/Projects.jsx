@@ -14,7 +14,9 @@ export default function Projects() {
             <Heading value={"Projects"} />
           </div>
           <div className="flex gap-2">
-            <button
+            <motion.button
+              initial={{ scale: 1 }}
+              whileTap={{ scale: 0.8 }}
               className={`py-1 px-4 mb-4 rounded-sm capitalize ${
                 projectsType === "web"
                   ? "bg-primary text-black"
@@ -23,8 +25,10 @@ export default function Projects() {
               onClick={() => setProjectsType("web")}
             >
               web
-            </button>
-            <button
+            </motion.button>
+            <motion.button
+              initial={{ scale: 1 }}
+              whileTap={{ scale: 0.8 }}
               className={`py-1 px-4 mb-4 rounded-sm capitalize ${
                 projectsType === "illustration"
                   ? "bg-primary text-black"
@@ -33,7 +37,7 @@ export default function Projects() {
               onClick={() => setProjectsType("illustration")}
             >
               illustrations
-            </button>
+            </motion.button>
           </div>
           <div className="Projects-items my-4">
             {projectsType === "web" ? (
