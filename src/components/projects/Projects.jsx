@@ -4,6 +4,9 @@ import Heading from "../Heading";
 import { projects, illustrationProjects } from "../../data";
 import "./Projects.css";
 import { useState } from "react";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 export default function Projects() {
   const [projectsType, setProjectsType] = useState("web");
   return (
@@ -41,31 +44,35 @@ export default function Projects() {
           </div>
           <div className="Projects-items my-4">
             {projectsType === "web" ? (
-              <div className="grid items-center justify-center gap-4 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid items-start justify-center gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project) => (
-                  <div key={project.id} className="">
+                  <div key={project.id} className="h-full relative mb-[40px]">
                     <Project {...project} />
                   </div>
                 ))}
               </div>
             ) : (
-              <div className="grid justify-center lg:grid-cols-2 gap-4">
-                {illustrationProjects.map((project) => (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.4 }}
-                    key={project.id}
-                    className="my-8 text-center"
-                  >
-                    <strong className="block my-4 text-2xl md:text-4xl">
-                      {project.name}
-                    </strong>
-                    <div className="flex items-center justify-center max-w-[600px] mx-auto">
-                      <img src={project.img} />
-                    </div>
-                  </motion.div>
-                ))}
+              <div className="">
+                <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 800: 2 }}>
+                  <Masonry gutter="40px">
+                    {illustrationProjects.map((project) => (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.4 }}
+                        key={project.id}
+                        className="text-center"
+                      >
+                        <strong className="block my-2 text-2xl md:text-4xl">
+                          {project.name}
+                        </strong>
+                        <Zoom>
+                          <img src={project.img} />
+                        </Zoom>
+                      </motion.div>
+                    ))}
+                  </Masonry>
+                </ResponsiveMasonry>
               </div>
             )}
           </div>
@@ -75,13 +82,13 @@ export default function Projects() {
   );
 }
 
-function Project({ name, img, link, tech }) {
+function Project({ name, img, link, tech, description }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="Project bg-[#4a68968c] p-2 rounded-sm max-w-[560px]"
+      className="Project bg-[#4a68968c] h-full p-2 rounded-sm max-w-[560px]"
     >
       <div className="mt-2 flex items-center justify-between">
         <motion.h3
@@ -94,7 +101,7 @@ function Project({ name, img, link, tech }) {
         <motion.a
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          className="underline"
+          className="underline text-blue-400"
           href={link}
           target="_blank"
           rel="noreferrer"
@@ -108,19 +115,18 @@ function Project({ name, img, link, tech }) {
         transition={{ duration: 0.4 }}
         className="my-4"
       >
-        <img src={img} alt={name} />
+        <Zoom zoomMargin={10}>
+          <img src={img} alt={name} />
+        </Zoom>
       </motion.div>
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         className="text-sm"
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique
-        facilis consequatur corporis quis exercitationem ea repellendus ex
-        possimus, maxime, hic sequi nobis culpa voluptas ab perferendis
-        reiciendis. Natus, quod incidunt?
+        {description}
       </motion.p>
-      <div className="tech-wrapper flex mt-3 gap-1">
+      <div className="tech-wrapper flex mt-3 gap-1 absolute bottom-2">
         {tech.map((item) => (
           <motion.div
             initial={{ opacity: 0, x: 20 }}

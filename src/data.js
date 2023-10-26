@@ -104,6 +104,8 @@ export const projects = [
         name: "tailwind",
       },
     ],
+    description:
+      "Portfolio of company Purpledminds. Static website with beautiful, responsive & modern deisgn with framer motion animations",
   },
   {
     id: 1,
@@ -127,6 +129,8 @@ export const projects = [
         name: "js",
       },
     ],
+    description:
+      "Website of Illia State University, where every text data which Illiauni owns can be searched and filtered. This is one of my first projects where I worked with team of backened developers & designers.",
   },
   {
     id: 2,
@@ -150,6 +154,8 @@ export const projects = [
         name: "firebase",
       },
     ],
+    description:
+      "Netflix clone, fully responsive, where user can watch film trailers. This website uses firebase authentication as well as TMDB API",
   },
   {
     id: 3,
@@ -173,6 +179,8 @@ export const projects = [
         name: "sass",
       },
     ],
+    description:
+      "Karma games, dynamic website to search, save, scroll through new games. This is made using RAWG api. One of my first Typescript project which helped me understand types in javascript.",
   },
   {
     id: 4,
@@ -196,6 +204,8 @@ export const projects = [
         name: "sass",
       },
     ],
+    description:
+      "Weather, one of my first web application. Here user can search different cities/countries weather. Fully responsive with beautiful design.",
   },
   {
     id: 5,
@@ -224,6 +234,8 @@ export const projects = [
         name: "sqlite",
       },
     ],
+    description:
+      "lorem ipsum dolor rame rume rime rame rume rime rame rume rimeasdsadas asdasdasad asdasd asda asd as da d",
   },
 ];
 

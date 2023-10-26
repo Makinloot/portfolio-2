@@ -12,8 +12,9 @@ import { motion } from "framer-motion";
 
 function App() {
   const { showMenu, showPopup } = useAppContext();
+
   return (
-    <div className="App min-h-[100vh] text-primary font-primary relative">
+    <div className="App min-h-[100vh] text-primary font-primary relative overflow-x-hidden">
       <BurgerMenu />
       <Header />
       <div className={`pt-24`}>

@@ -15,12 +15,11 @@ export default function Skills() {
             <Heading value={"What i do"} />
           </div>
           {/* container */}
-          {/* <div className="lg:grid grid-cols-2 lg:py-12 items-center"> */}
-          <div className="relative my-12">
+          <div className="relative my-12 overflow-hidden">
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              className="Skills-animation absolute !top-[50%] !left-[50%] !-translate-y-1/2 !-translate-x-1/2 z-[-100]"
+              className="Skills-animation absolute !top-[50%] !left-[50%] w-full !-translate-y-1/2 !-translate-x-1/2 z-[-100]"
             >
               <Lottie
                 animationData={skillsAnimation}
