@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import avatar from "/me.jpg";
 import "./About.css";
 import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import CV from "./CV.pdf";
 
 const name = ["tornike", "epitashvili"];
 export default function About() {
@@ -85,14 +86,16 @@ export default function About() {
                 url={"https://www.instagram.com/seed_9777/"}
               />
             </div>
-            <motion.button
+            <motion.a
+              href={CV}
+              download
               initial={{ background: "transparent" }}
               whileHover={{ scale: 0.9, background: "#94b0f5a1" }}
               transition={{ type: "spring", damping: 8 }}
-              className="bg-transparent border border-white/60 rounded-sm py-2 px-8 md:py-4 md:px-16 md:text-xl"
+              className="bg-transparent border cursor-pointer inline-block border-white/60 rounded-sm py-2 px-8 md:py-4 md:px-16 md:text-xl"
             >
               Download resume
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </div>
