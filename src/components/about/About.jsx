@@ -93,6 +93,7 @@ export default function About() {
               whileHover={{ scale: 0.9, background: "#94b0f5a1" }}
               transition={{ type: "spring", damping: 8 }}
               className="bg-transparent border cursor-pointer inline-block border-white/60 rounded-sm py-2 px-8 md:py-4 md:px-16 md:text-xl"
+              target="_blank"
             >
               Download resume
             </motion.a>
