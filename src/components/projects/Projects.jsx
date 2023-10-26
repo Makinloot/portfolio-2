@@ -10,7 +10,10 @@ import "react-medium-image-zoom/dist/styles.css";
 export default function Projects() {
   const [projectsType, setProjectsType] = useState("web");
   return (
-    <section className="Projects py-12 overflow-x-hidden" id="projects-section">
+    <section
+      className="Projects py-12 overflow-x-hidden min-h-[100vh]"
+      id="projects-section"
+    >
       <div className="container">
         <div className="Projects-wrapper">
           <div className="mb-12">
