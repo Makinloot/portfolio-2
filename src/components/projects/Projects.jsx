@@ -56,7 +56,9 @@ export default function Projects() {
               </div>
             ) : (
               <div className="">
-                <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 800: 2 }}>
+                <ResponsiveMasonry
+                  columnsCountBreakPoints={{ 350: 1, 800: 2, 900: 3 }}
+                >
                   <Masonry gutter="40px">
                     {illustrationProjects.map((project) => (
                       <motion.div
@@ -66,7 +68,7 @@ export default function Projects() {
                         key={project.id}
                         className="text-center"
                       >
-                        <strong className="block my-2 text-2xl md:text-4xl">
+                        <strong className="block my-2 text-2xl capitalize">
                           {project.name}
                         </strong>
                         <Zoom>

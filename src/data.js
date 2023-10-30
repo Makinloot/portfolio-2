@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import html from "/skills/html.svg";
 import css from "/skills/css.svg";
 import js from "/skills/js.svg";
@@ -20,67 +21,69 @@ import weather from "/projects/weather.png";
 import medsoft from "/projects/medsoft.png";
 import sqlite from "/skills/sqlite.png";
 import sin from "/illustrations/sin.png";
+import batushka from "/illustrations/batushka.png";
+import p4 from "/illustrations/p4.png";
 import illustrator from "/skills/ai.svg";
 import photoshop from "/skills/photoshop.svg";
 
 export const technologies = [
   {
-    id: 0,
+    id: uuidv4(),
     icon: html,
     name: "HTML",
   },
   {
-    id: 1,
+    id: uuidv4(),
     icon: css,
     name: "CSS",
   },
   {
-    id: 2,
+    id: uuidv4(),
     icon: sass,
     name: "SCSS",
   },
   {
-    id: 3,
+    id: uuidv4(),
     icon: js,
     name: "Javascript",
   },
   {
-    id: 4,
+    id: uuidv4(),
     icon: ts,
     name: "Typescript",
   },
   {
-    id: 5,
+    id: uuidv4(),
     icon: react,
     name: "React / React Native",
   },
   {
-    id: 6,
+    id: uuidv4(),
     icon: node,
     name: "Node JS",
   },
   {
-    id: 7,
+    id: uuidv4(),
     icon: firebase,
     name: "Firebase",
   },
   {
-    id: 8,
+    id: uuidv4(),
     icon: git,
     name: "Git",
   },
   {
-    id: 9,
+    id: uuidv4(),
     icon: tailwind,
     name: "Tailwind CSS",
   },
   {
-    id: 10,
+    id: uuidv4(),
     icon: illustrator,
     name: "Adobe Illustrator",
   },
   {
-    id: 11,
+    id: uuidv4(),
     icon: photoshop,
     name: "Adobe Photoshop",
   },
@@ -88,18 +91,18 @@ export const technologies = [
 
 export const projects = [
   {
-    id: 0,
+    id: uuidv4(),
     img: purpledminds,
     name: "Purpledminds",
     link: "https://purpledminds.com",
     tech: [
       {
-        id: 0,
+        id: uuidv4(),
         icon: react,
         name: "react",
       },
       {
-        id: 1,
+        id: uuidv4(),
         icon: tailwind,
         name: "tailwind",
       },
@@ -108,23 +111,23 @@ export const projects = [
       "Portfolio of company Purpledminds. Static website with beautiful, responsive & modern deisgn with framer motion animations",
   },
   {
-    id: 1,
+    id: uuidv4(),
     img: languageCorpus,
     name: "Language Corpus",
     link: "http://corpora.iliauni.edu.ge/search_words",
     tech: [
       {
-        id: 0,
+        id: uuidv4(),
         icon: html,
         name: "html",
       },
       {
-        id: 1,
+        id: uuidv4(),
         icon: css,
         name: "css",
       },
       {
-        id: 2,
+        id: uuidv4(),
         icon: js,
         name: "js",
       },
@@ -133,23 +136,23 @@ export const projects = [
       "Website of Illia State University, where every text data which Illiauni owns can be searched and filtered. This is one of my first projects where I worked with team of backened developers & designers.",
   },
   {
-    id: 2,
+    id: uuidv4(),
     img: netflix,
     name: "Netflix clone",
     link: "https://dynamic-paprenjak-586a86.netlify.app",
     tech: [
       {
-        id: 0,
+        id: uuidv4(),
         icon: react,
         name: "react",
       },
       {
-        id: 1,
+        id: uuidv4(),
         icon: sass,
         name: "sass",
       },
       {
-        id: 2,
+        id: uuidv4(),
         icon: firebase,
         name: "firebase",
       },
@@ -158,23 +161,23 @@ export const projects = [
       "Netflix clone, fully responsive, where user can watch film trailers. This website uses firebase authentication as well as TMDB API",
   },
   {
-    id: 3,
+    id: uuidv4(),
     img: games,
     name: "Karma games",
     link: "https://beautiful-salamander-e8d545.netlify.app",
     tech: [
       {
-        id: 0,
+        id: uuidv4(),
         icon: react,
         name: "react",
       },
       {
-        id: 1,
+        id: uuidv4(),
         icon: ts,
         name: "typescript",
       },
       {
-        id: 2,
+        id: uuidv4(),
         icon: sass,
         name: "sass",
       },
@@ -183,23 +186,23 @@ export const projects = [
       "Karma games, dynamic website to search, save, scroll through new games. This is made using RAWG api. One of my first Typescript project which helped me understand types in javascript.",
   },
   {
-    id: 4,
+    id: uuidv4(),
     img: weather,
     name: "Weather",
     link: "https://ornate-marshmallow-18e926.netlify.app",
     tech: [
       {
-        id: 0,
+        id: uuidv4(),
         icon: react,
         name: "react",
       },
       {
-        id: 1,
+        id: uuidv4(),
         icon: ts,
         name: "typescript",
       },
       {
-        id: 2,
+        id: uuidv4(),
         icon: sass,
         name: "sass",
       },
@@ -208,28 +211,28 @@ export const projects = [
       "Weather, one of my first web application. Here user can search different cities/countries weather. Fully responsive with beautiful design.",
   },
   {
-    id: 5,
+    id: uuidv4(),
     img: medsoft,
     name: "Medsoft Task",
     link: "https://medsoft-task.onrender.com",
     tech: [
       {
-        id: 0,
+        id: uuidv4(),
         icon: react,
         name: "react",
       },
       {
-        id: 1,
+        id: uuidv4(),
         icon: tailwind,
         name: "tailwind",
       },
       {
-        id: 2,
+        id: uuidv4(),
         icon: node,
         name: "nodejs",
       },
       {
-        id: 3,
+        id: uuidv4(),
         icon: sqlite,
         name: "sqlite",
       },
@@ -241,28 +244,39 @@ export const projects = [
 
 export const illustrationProjects = [
   {
-    id: 0,
+    id: uuidv4(),
     img: ashKnight,
     name: "Ash Knight",
   },
   {
-    id: 1,
+    id: uuidv4(),
     img: sunKnight,
     name: "Solaire of Astora",
   },
   {
-    id: 2,
+    id: uuidv4(),
+    img: sin,
+    name: "Sin",
+  },
+  {
+    id: uuidv4(),
     img: malenia,
     name: "Goddess of Rot",
   },
   {
-    id: 3,
+    id: uuidv4(),
     img: theFall,
     name: "The Fall",
   },
+
   {
-    id: 4,
-    img: sin,
-    name: "Sin",
+    id: uuidv4(),
+    img: batushka,
+    name: "The False Promise",
+  },
+  {
+    id: uuidv4(),
+    img: p4,
+    name: "suicide is legal",
   },
 ];
