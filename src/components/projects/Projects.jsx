@@ -68,7 +68,7 @@ export default function Projects() {
                         key={project.id}
                         className="text-center"
                       >
-                        <strong className="block my-2 text-2xl capitalize">
+                        <strong className="block my-4 text-2xl capitalize">
                           {project.name}
                         </strong>
                         <Zoom>

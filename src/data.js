@@ -279,11 +279,7 @@ export const illustrationProjects = [
     img: p4,
     name: "suicide is legal",
   },
-  {
-    id: uuidv4(),
-    img: p4,
-    name: "suicide is legal",
-  },
+
   {
     id: uuidv4(),
     img: eldenLord,
