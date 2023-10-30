@@ -23,6 +23,7 @@ import sqlite from "/skills/sqlite.png";
 import sin from "/illustrations/sin.png";
 import batushka from "/illustrations/batushka.png";
 import p4 from "/illustrations/p4.png";
+import eldenLord from "/illustrations/elden-lord.png";
 import illustrator from "/skills/ai.svg";
 import photoshop from "/skills/photoshop.svg";
 
@@ -268,7 +269,6 @@ export const illustrationProjects = [
     img: theFall,
     name: "The Fall",
   },
-
   {
     id: uuidv4(),
     img: batushka,
@@ -278,5 +278,15 @@ export const illustrationProjects = [
     id: uuidv4(),
     img: p4,
     name: "suicide is legal",
+  },
+  {
+    id: uuidv4(),
+    img: p4,
+    name: "suicide is legal",
+  },
+  {
+    id: uuidv4(),
+    img: eldenLord,
+    name: "the first elden lord",
   },
 ];
