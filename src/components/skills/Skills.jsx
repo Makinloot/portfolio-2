@@ -44,7 +44,7 @@ export default function Skills() {
                   }
                   whileInView={{ opacity: 1, x: 0 }}
                   whileHover={{
-                    scale: 1.2,
+                    scale: 0.9,
                     background: "#4a6896",
                     outline: "1px solid #bbb",
                     borderRadius: "4px",
