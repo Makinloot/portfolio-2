@@ -20,7 +20,6 @@ import games from "/projects/games.png";
 import weather from "/projects/weather.png";
 import medsoft from "/projects/medsoft.png";
 import sqlite from "/skills/sqlite.png";
-import sin from "/illustrations/sin.png";
 import batushka from "/illustrations/batushka.png";
 import p4 from "/illustrations/p4.png";
 import eldenLord from "/illustrations/elden-lord.png";
@@ -255,11 +254,7 @@ export const illustrationProjects = [
     img: sunKnight,
     name: "Solaire of Astora",
   },
-  {
-    id: uuidv4(),
-    img: sin,
-    name: "Sin",
-  },
+
   {
     id: uuidv4(),
     img: malenia,
