@@ -57,7 +57,7 @@ export default function Projects() {
             ) : (
               <div className="">
                 <ResponsiveMasonry
-                  columnsCountBreakPoints={{ 350: 1, 800: 2, 900: 3 }}
+                  columnsCountBreakPoints={{ 350: 1, 700: 2, 900: 3 }}
                 >
                   <Masonry gutter="20px">
                     {illustrationProjects.map((project) => (

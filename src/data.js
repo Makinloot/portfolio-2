@@ -250,11 +250,7 @@ export const illustrationProjects = [
     img: malenia,
     name: "Goddess of Rot",
   },
-  {
-    id: uuidv4(),
-    img: theFall,
-    name: "The Fall",
-  },
+
   {
     id: uuidv4(),
     img: batushka,
@@ -274,5 +270,10 @@ export const illustrationProjects = [
     id: uuidv4(),
     img: echoes,
     name: "echoes",
+  },
+  {
+    id: uuidv4(),
+    img: theFall,
+    name: "The Fall",
   },
 ];
