@@ -18,8 +18,8 @@ export default function Header() {
       >
         <div className="container">
           <div className="Header-wrapper h-24 flex justify-between items-center">
-            <div className="logo">
-              <img src={logo} />
+            <div className="logo w-[100px]">
+              <img src={logo} className="w-full" />
             </div>
             <Navbar />
             <div className="md:hidden">
