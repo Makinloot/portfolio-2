@@ -18,8 +18,8 @@ import malenia from "/illustrations/malenia.png";
 import theFall from "/illustrations/the-fall.png";
 import games from "/projects/games.png";
 import weather from "/projects/weather.png";
-import medsoft from "/projects/medsoft.png";
-import sqlite from "/skills/sqlite.png";
+import lizaPf from "/projects/pf-liza.png";
+// import sqlite from "/skills/sqlite.png";
 import batushka from "/illustrations/batushka.png";
 import p4 from "/illustrations/p4.png";
 import eldenLord from "/illustrations/elden-lord.png";
@@ -213,9 +213,9 @@ export const projects = [
   },
   {
     id: uuidv4(),
-    img: medsoft,
-    name: "Medsoft Task",
-    link: "https://medsoft-task.onrender.com",
+    img: lizaPf,
+    name: "Artist Portfolio",
+    link: "https://deluxe-nougat-af091d.netlify.app",
     tech: [
       {
         id: uuidv4(),
@@ -227,19 +227,9 @@ export const projects = [
         icon: tailwind,
         name: "tailwind",
       },
-      {
-        id: uuidv4(),
-        icon: node,
-        name: "nodejs",
-      },
-      {
-        id: uuidv4(),
-        icon: sqlite,
-        name: "sqlite",
-      },
     ],
     description:
-      "lorem ipsum dolor rame rume rime rame rume rime rame rume rimeasdsadas asdasdasad asdasd asda asd as da d",
+      "Artist portfolio, with animations, responsive and zoomable images.",
   },
 ];
 

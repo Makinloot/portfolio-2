@@ -59,7 +59,7 @@ export default function Projects() {
                 <ResponsiveMasonry
                   columnsCountBreakPoints={{ 350: 1, 800: 2, 900: 3 }}
                 >
-                  <Masonry gutter="40px">
+                  <Masonry gutter="20px">
                     {illustrationProjects.map((project) => (
                       <motion.div
                         initial={{ opacity: 0 }}
