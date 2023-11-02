@@ -16,6 +16,8 @@ import ashKnight from "/illustrations/ash-knight.png";
 import sunKnight from "/illustrations/sun-knight.png";
 import malenia from "/illustrations/malenia.png";
 import theFall from "/illustrations/the-fall.png";
+import mohg from "/illustrations/mohg.png";
+import promisedChildren from "/illustrations/promised-children.png";
 import games from "/projects/games.png";
 import weather from "/projects/weather.png";
 import lizaPf from "/projects/pf-liza.png";
@@ -275,5 +277,15 @@ export const illustrationProjects = [
     id: uuidv4(),
     img: theFall,
     name: "The Fall",
+  },
+  {
+    id: uuidv4(),
+    img: mohg,
+    name: "Birth of a Dynasty",
+  },
+  {
+    id: uuidv4(),
+    img: promisedChildren,
+    name: "the promised children",
   },
 ];
