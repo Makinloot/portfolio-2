@@ -60,22 +60,24 @@ export default function Projects() {
                   columnsCountBreakPoints={{ 350: 1, 700: 2, 900: 3 }}
                 >
                   <Masonry gutter="20px">
-                    {illustrationProjects.map((project) => (
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.4 }}
-                        key={project.id}
-                        className="text-center"
-                      >
-                        <strong className="block my-4 text-2xl capitalize">
-                          {project.name}
-                        </strong>
-                        <Zoom>
-                          <img src={project.img} />
-                        </Zoom>
-                      </motion.div>
-                    ))}
+                    {illustrationProjects
+                      .map((project) => (
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          transition={{ duration: 0.4 }}
+                          key={project.id}
+                          className="text-center"
+                        >
+                          <strong className="block my-4 text-2xl capitalize">
+                            {project.name}
+                          </strong>
+                          <Zoom>
+                            <img src={project.img} />
+                          </Zoom>
+                        </motion.div>
+                      ))
+                      .reverse()}
                   </Masonry>
                 </ResponsiveMasonry>
               </div>
