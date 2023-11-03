@@ -19,6 +19,7 @@ import theFall from "/illustrations/the-fall.png";
 import mohg from "/illustrations/mohg.png";
 import godrick from "/illustrations/godrick.png";
 import executioner from "/illustrations/executioner.png";
+import godfrey from "/illustrations/godfrey.png";
 import promisedChildren from "/illustrations/promised-children.png";
 import games from "/projects/games.png";
 import weather from "/projects/weather.png";
@@ -26,7 +27,7 @@ import lizaPf from "/projects/pf-liza.png";
 // import sqlite from "/skills/sqlite.png";
 import batushka from "/illustrations/batushka.png";
 import p4 from "/illustrations/p4.png";
-import eldenLord from "/illustrations/elden-lord.png";
+// import eldenLord from "/illustrations/elden-lord.png";
 // import echoes from "/illustrations/echoes.png";
 import illustrator from "/skills/ai.svg";
 import photoshop from "/skills/photoshop.svg";
@@ -267,12 +268,6 @@ export const illustrationProjects = [
   },
   {
     id: uuidv4(),
-    img: eldenLord,
-    name: "the first elden lord",
-  },
-
-  {
-    id: uuidv4(),
     img: theFall,
     name: "The Fall",
   },
@@ -295,5 +290,10 @@ export const illustrationProjects = [
     id: uuidv4(),
     img: executioner,
     name: "the executioner",
+  },
+  {
+    id: uuidv4(),
+    img: godfrey,
+    name: "The first elden lord",
   },
 ];
