@@ -18,6 +18,7 @@ import malenia from "/illustrations/malenia.png";
 import theFall from "/illustrations/the-fall.png";
 import mohg from "/illustrations/mohg.png";
 import godrick from "/illustrations/godrick.png";
+import executioner from "/illustrations/executioner.png";
 import promisedChildren from "/illustrations/promised-children.png";
 import games from "/projects/games.png";
 import weather from "/projects/weather.png";
@@ -289,5 +290,10 @@ export const illustrationProjects = [
     id: uuidv4(),
     img: godrick,
     name: "Grafted",
+  },
+  {
+    id: uuidv4(),
+    img: executioner,
+    name: "the executioner",
   },
 ];
