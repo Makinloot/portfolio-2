@@ -15,11 +15,16 @@ import netflix from "/projects/netflix.png";
 import ashKnight from "/illustrations/ash-knight.png";
 import sunKnight from "/illustrations/sun-knight.png";
 import malenia from "/illustrations/malenia.png";
+import margit from "/illustrations/margit.png";
 import theFall from "/illustrations/the-fall.png";
 import mohg from "/illustrations/mohg.png";
 import godrick from "/illustrations/godrick.png";
 import executioner from "/illustrations/executioner.png";
 import godfrey from "/illustrations/godfrey.png";
+import festival from "/illustrations/festival.png";
+import starscourge from "/illustrations/starscourge.png";
+import banished from "/illustrations/banished.png";
+import ranni from "/illustrations/ranni.png";
 import promisedChildren from "/illustrations/promised-children.png";
 import games from "/projects/games.png";
 import weather from "/projects/weather.png";
@@ -295,5 +300,30 @@ export const illustrationProjects = [
     id: uuidv4(),
     img: godfrey,
     name: "The first elden lord",
+  },
+  {
+    id: uuidv4(),
+    img: margit,
+    name: "The fell omen",
+  },
+  {
+    id: uuidv4(),
+    img: festival,
+    name: "redmane festival",
+  },
+  {
+    id: uuidv4(),
+    img: starscourge,
+    name: "genral radahn",
+  },
+  {
+    id: uuidv4(),
+    img: banished,
+    name: "seeker of purpose",
+  },
+  {
+    id: uuidv4(),
+    img: ranni,
+    name: "age of stars",
   },
 ];
