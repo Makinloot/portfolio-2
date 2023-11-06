@@ -88,8 +88,8 @@ export default function Projects() {
                   <Masonry gutter="20px">
                     {items.map((project) => (
                       <motion.div
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                         transition={{ duration: 0.4 }}
                         key={project.id}
                         className="text-center"
