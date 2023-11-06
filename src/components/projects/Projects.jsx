@@ -3,12 +3,38 @@ import { motion } from "framer-motion";
 import Heading from "../Heading";
 import { projects, illustrationProjects } from "../../data";
 import "./Projects.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import InfiniteScroll from "react-infinite-scroll-component";
 export default function Projects() {
   const [projectsType, setProjectsType] = useState("web");
+  const [items, setItems] = useState([]);
+  const [hasMore, setHasMore] = useState(true);
+
+  // function to load more illustrations on btn click
+  const loadMoreIllustrations = () => {
+    const itemsPerPage = 3;
+    const startIndex = items.length;
+    const endIndex = startIndex + itemsPerPage;
+
+    const newItems = illustrationProjects.slice(startIndex, endIndex);
+
+    setItems([...items, ...newItems]);
+
+    if (items.length + newItems.length >= illustrationProjects.length) {
+      setHasMore(false);
+    }
+  };
+
+  useEffect(() => {
+    // Initial fetch of 3 items when the component mounts
+    const itemsPerPage = 3;
+    const newItems = illustrationProjects.slice(0, itemsPerPage);
+    setItems(newItems);
+  }, []);
+
   return (
     <section
       className="Projects py-12 overflow-x-hidden min-h-[100vh]"
@@ -57,29 +83,35 @@ export default function Projects() {
             ) : (
               <div className="">
                 <ResponsiveMasonry
-                  columnsCountBreakPoints={{ 350: 1, 700: 2, 900: 3 }}
+                  columnsCountBreakPoints={{ 350: 1, 600: 2, 900: 3 }}
                 >
                   <Masonry gutter="20px">
-                    {illustrationProjects
-                      .map((project) => (
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          whileInView={{ opacity: 1 }}
-                          transition={{ duration: 0.4 }}
-                          key={project.id}
-                          className="text-center"
-                        >
-                          <strong className="block my-4 text-2xl capitalize">
-                            {project.name}
-                          </strong>
-                          <Zoom>
-                            <img src={project.img} />
-                          </Zoom>
-                        </motion.div>
-                      ))
-                      .reverse()}
+                    {items.map((project) => (
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.4 }}
+                        key={project.id}
+                        className="text-center"
+                      >
+                        <strong className="block my-4 text-2xl capitalize">
+                          {project.name}
+                        </strong>
+                        <Zoom>
+                          <img src={project.img} />
+                        </Zoom>
+                      </motion.div>
+                    ))}
                   </Masonry>
                 </ResponsiveMasonry>
+                <div className="my-8 flex justify-center">
+                  <button
+                    onClick={loadMoreIllustrations}
+                    className="py-1 px-4 mb-4 rounded-sm capitalize bg-primary text-black lg:hover:scale-90 duration-200 lg:hover:bg-lightBlue lg:hover:text-primary"
+                  >
+                    {hasMore ? "Load More" : "No more artworks"}
+                  </button>
+                </div>
               </div>
             )}
           </div>

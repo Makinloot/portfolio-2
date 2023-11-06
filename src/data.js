@@ -246,38 +246,6 @@ export const projects = [
 export const illustrationProjects = [
   {
     id: uuidv4(),
-    img: ashKnight,
-    name: "Ash Knight",
-  },
-  {
-    id: uuidv4(),
-    img: sunKnight,
-    name: "Solaire of Astora",
-  },
-
-  {
-    id: uuidv4(),
-    img: malenia,
-    name: "Goddess of Rot",
-  },
-
-  {
-    id: uuidv4(),
-    img: batushka,
-    name: "The False Promise",
-  },
-  {
-    id: uuidv4(),
-    img: p4,
-    name: "suicide is legal",
-  },
-  {
-    id: uuidv4(),
-    img: theFall,
-    name: "The Fall",
-  },
-  {
-    id: uuidv4(),
     img: mohg,
     name: "Birth of a Dynasty",
   },
