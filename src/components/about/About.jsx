@@ -2,7 +2,12 @@
 import { motion } from "framer-motion";
 import avatar from "/me.jpg";
 import "./About.css";
-import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import {
+  FaGithubSquare,
+  FaInstagramSquare,
+  FaLinkedin,
+  FaBehanceSquare,
+} from "react-icons/fa";
 import CV from "./CV.pdf";
 
 const name = ["tornike", "epitashvili"];
@@ -84,6 +89,11 @@ export default function About() {
               <SocialLinks
                 icon={<FaInstagramSquare />}
                 url={"https://www.instagram.com/seed_9777/"}
+              />
+              <SocialLinks
+                icon={<FaBehanceSquare />}
+                url={"https://www.behance.net/seed9777"}
+                marginx
               />
             </div>
             <motion.a
