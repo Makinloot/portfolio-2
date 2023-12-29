@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import InfiniteScroll from "react-infinite-scroll-component";
+// import InfiniteScroll from "react-infinite-scroll-component";
 export default function Projects() {
   const [projectsType, setProjectsType] = useState("web");
   const [items, setItems] = useState([]);

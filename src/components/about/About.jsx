@@ -68,10 +68,10 @@ export default function About() {
               <p className="pt-4 md:text-xl">
                 I&apos;m a React developer from Tbilisi, Georgia. I&apos;m
                 focused on building interesting, mobile friendly websites & apps
-                with clean and reusable code. Currently intern at MEDSOFT as
-                Junior Fronted Developer position, also working on different
-                projects from home. As a hobby, I love to create digital art,
-                which made me learn Adobe Photoshop/Illustrator.
+                with clean and reusable code. Currently Fronted Developer at
+                MEDSOFT, also working on different projects from home. As a
+                hobby, I love to create digital art, which made me learn Adobe
+                Photoshop/Illustrator.
               </p>
             </div>
             <div className="flex my-8 text-gray-400">

@@ -12,11 +12,11 @@ import tailwind from "/skills/tailwind.svg";
 import purpledminds from "/projects/purpledminds.png";
 import languageCorpus from "/projects/language-corpus.png";
 import netflix from "/projects/netflix.png";
-import ashKnight from "/illustrations/ash-knight.png";
-import sunKnight from "/illustrations/sun-knight.png";
-import malenia from "/illustrations/malenia.png";
+// import ashKnight from "/illustrations/ash-knight.png";
+// import sunKnight from "/illustrations/sun-knight.png";
+// import malenia from "/illustrations/malenia.png";
 import margit from "/illustrations/margit.png";
-import theFall from "/illustrations/the-fall.png";
+// import theFall from "/illustrations/the-fall.png";
 import mohg from "/illustrations/mohg.png";
 import godrick from "/illustrations/godrick.png";
 import executioner from "/illustrations/executioner.png";
@@ -30,8 +30,8 @@ import games from "/projects/games.png";
 import weather from "/projects/weather.png";
 import lizaPf from "/projects/pf-liza.png";
 // import sqlite from "/skills/sqlite.png";
-import batushka from "/illustrations/batushka.png";
-import p4 from "/illustrations/p4.png";
+// import batushka from "/illustrations/batushka.png";
+// import p4 from "/illustrations/p4.png";
 // import eldenLord from "/illustrations/elden-lord.png";
 // import echoes from "/illustrations/echoes.png";
 import illustrator from "/skills/ai.svg";
@@ -294,4 +294,4 @@ export const illustrationProjects = [
     img: ranni,
     name: "age of stars",
   },
-];
+].reverse();
